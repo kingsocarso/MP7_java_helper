@@ -12,8 +12,10 @@ public class Helper {
 			int counter = 1;
 			while(scanner.hasNextLine() && counter < 15) {
 				String line = scanner.nextLine();
-				System.out.println(counter + ": " + line);
-				counter++;
+				if (line.contains("County: <\\/b>Cook")) {
+					System.out.println(counter + ": " + line);
+					counter++;
+				}
 			}
 			scanner.close();
 		} catch (FileNotFoundException e) {
