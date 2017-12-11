@@ -9,6 +9,12 @@ public class Helper {
 		Scanner scanner;
 		try {
 			scanner = new Scanner(file);
+			int counter = 1;
+			while(scanner.hasNextLine()) {
+				String line = scanner.nextLine();
+				System.out.println(counter + ": " + line);
+				counter++;
+			}
 			scanner.close();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
