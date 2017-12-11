@@ -10,7 +10,7 @@ public class Helper {
 		try {
 			scanner = new Scanner(file);
 			int counter = 1;
-			while(scanner.hasNextLine()) {
+			while(scanner.hasNextLine() && counter < 15) {
 				String line = scanner.nextLine();
 				System.out.println(counter + ": " + line);
 				counter++;
